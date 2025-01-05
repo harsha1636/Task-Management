@@ -1,9 +1,91 @@
-Task Management API</br>This is a Node.js-based Task Management API built with Express.js. The API allows you to perform CRUD operations on tasks, including retrieving, creating, updating, and deleting tasks.</br>Features</br>CRUD Operations:
+Task Management API
+This Node.js application is a RESTful API built with Express.js and MongoDB. It allows for managing product data, including creating, retrieving, updating, and deleting products.
 
-Retrieve all tasks.</br>Retrieve a specific task by ID.</br>Create a new task.</br>Update an existing task.</br>Delete a task.</br>Authentication:</br>Basic authentication required for some endpoints.</br>Validation:
+Features
+CRUD Operations:
 
-Input validation for task properties.
-Ensures only valid statuses and formats are accepted.
-Additional Operations:
+Retrieve all products.
+Retrieve a product by ID.
+Create a new product.
+Update an existing product.
+Delete a product.
 
-Mark a task as complete.
+Database:
+Powered by MongoDB using Mongoose.
+
+Error Handling:
+Proper error responses for invalid requests or server issues.
+
+Endpoints
+
+GET /api/products
+Description: Retrieve all products.
+Response:
+Status 200: Array of all products.
+Status 500: Error message.
+
+GET /api/product/:id
+Description: Retrieve a product by its ID.
+Parameters: id (string, required).
+Response:
+Status 200: The requested product.
+Status 404: Product not found.
+Status 500: Error message.
+
+POST /api/product
+Description: Create a new product.
+Body:
+json
+Copy code
+{
+  "field1": "value1",
+  "field2": "value2",
+  ...
+}
+Response:
+Status 200: The created product.
+Status 500: Error message.
+
+PUT /api/product/:id
+Description: Update an existing product.
+Parameters: id (string, required).
+Body (fields to update):
+json
+Copy code
+{
+  "field1": "new value",
+  "field2": "new value"
+}
+Response:
+Status 200: The updated product.
+Status 404: Product not found.
+Status 500: Error message.
+
+DELETE /api/product/:id
+Description: Delete a product by its ID.
+Parameters: id (string, required).
+Response:
+Status 200: Success message.
+Status 404: Product not found.
+Status 500: Error message.
+
+Access the API:
+The API will run at http://localhost:3000.
+
+Data Model
+The structure of a product depends on the schema in the productModel.js file. An example of a product object:
+
+json
+Copy code
+{
+  "_id": "unique-id",
+  "name": "Product Name",
+  "price": 100.00,
+  "description": "Product description",
+  "category": "Category name",
+  "stock": 50
+}
+Notes
+Ensure your MongoDB database is properly connected.
+Update productModel.js to reflect your product schema.
+Use a tool like Postman to test the API endpoints.
