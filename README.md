@@ -28,7 +28,7 @@ Access the API:</br>The API will run at http://localhost:3000.
 
 Data Model</br>The structure of a product depends on the schema in the productModel.js file. An example of a product object:
 
-{</br>"_id": "unique-id",</br>"name": "Product Name",</br>"price": 100.00,</br>"description": "Product description",</br>"category": "Category name",</br>"stock": 50
-}
+{</br>"_id": "unique-id",</br>"name": "Product Name",</br>"price": 100.00,</br>"description": "Product description",</br>"category": "Category name",</br>"stock": 50</br>}
+
 Notes
 Ensure your MongoDB database is properly connected.</br>Update productModel.js to reflect your product schema.</br>Use a tool like Postman to test the API endpoints.
