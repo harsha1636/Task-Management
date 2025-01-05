@@ -1,5 +1,4 @@
-Task Management API
-This Node.js application is a RESTful API built with Express.js and MongoDB. It allows for managing product data, including creating, retrieving, updating, and deleting products.
+Task Management API</br>This Node.js application is a RESTful API built with Express.js and MongoDB. It allows for managing product data, including creating, retrieving, updating, and deleting products.
 
 Features
 CRUD Operations:
