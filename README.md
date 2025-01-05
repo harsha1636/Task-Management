@@ -15,11 +15,9 @@ GET /api/products</br>Description: Retrieve all products.</br>Response:</br>Stat
 
 GET /api/product/:id</br>Description: Retrieve a product by its ID.</br>Parameters: id (string, required).</br>Response:</br>Status 200: The requested product.</br>Status 404: Product not found.</br>Status 500: Error message.
 
-POST /api/product</br>Description: Create a new product.</br>Body:</br>{ </br>"field1": "value1", </br>"field2": "value2", </br>... </br>}
-Response:</br>Status 200: The created product.</br>Status 500: Error message.
+POST /api/product</br>Description: Create a new product.</br>Body:</br>{ </br>"field1": "value1", </br>"field2": "value2", </br>... </br>}</br>Response:</br>Status 200: The created product.</br>Status 500: Error message.
 
-PUT /api/product/:id</br>Description: Update an existing product.</br>Parameters: id (string, required).</br>Body (fields to update):</br>{ </br>"field1": "new value", </br>"field2": "new value" </br>}
-Response:</br>Status 200: The updated product.</br>Status 404: Product not found.</br>Status 500: Error message.
+PUT /api/product/:id</br>Description: Update an existing product.</br>Parameters: id (string, required).</br>Body (fields to update):</br>{ </br>"field1": "new value", </br>"field2": "new value" </br>}</br>Response:</br>Status 200: The updated product.</br>Status 404: Product not found.</br>Status 500: Error message.
 
 DELETE /api/product/:id</br>Description: Delete a product by its ID.</br>Parameters: id (string, required).</br>Response:</br>Status 200: Success message.</br>Status 404: Product not found.</br>Status 500: Error message.
 
