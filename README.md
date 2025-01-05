@@ -4,88 +4,31 @@ This Node.js application is a RESTful API built with Express.js and MongoDB. It 
 Features
 CRUD Operations:
 
-Retrieve all products.
-Retrieve a product by ID.
-Create a new product.
-Update an existing product.
-Delete a product.
+Retrieve all products.</br>Retrieve a product by ID.</br>Create a new product.</br>Update an existing product.</br>Delete a product.
 
-Database:
-Powered by MongoDB using Mongoose.
+Database:</br>Powered by MongoDB using Mongoose.
 
-Error Handling:
-Proper error responses for invalid requests or server issues.
+Error Handling:</br>Proper error responses for invalid requests or server issues.
 
 Endpoints
 
-GET /api/products
-Description: Retrieve all products.
-Response:
-Status 200: Array of all products.
-Status 500: Error message.
+GET /api/products</br>Description: Retrieve all products.</br>Response:</br>Status 200: Array of all products.</br>Status 500: Error message.
 
-GET /api/product/:id
-Description: Retrieve a product by its ID.
-Parameters: id (string, required).
-Response:
-Status 200: The requested product.
-Status 404: Product not found.
-Status 500: Error message.
+GET /api/product/:id</br>Description: Retrieve a product by its ID.</br>Parameters: id (string, required).</br>Response:</br>Status 200: The requested product.</br>Status 404: Product not found.</br>Status 500: Error message.
 
-POST /api/product
-Description: Create a new product.
-Body:
-json
-Copy code
-{
-  "field1": "value1",
-  "field2": "value2",
-  ...
-}
-Response:
-Status 200: The created product.
-Status 500: Error message.
+POST /api/product</br>Description: Create a new product.</br>Body:</br>{ </br>"field1": "value1", </br>"field2": "value2", </br>... </br>}
+Response:</br>Status 200: The created product.</br>Status 500: Error message.
 
-PUT /api/product/:id
-Description: Update an existing product.
-Parameters: id (string, required).
-Body (fields to update):
-json
-Copy code
-{
-  "field1": "new value",
-  "field2": "new value"
-}
-Response:
-Status 200: The updated product.
-Status 404: Product not found.
-Status 500: Error message.
+PUT /api/product/:id</br>Description: Update an existing product.</br>Parameters: id (string, required).</br>Body (fields to update):</br>{ </br>"field1": "new value", </br>"field2": "new value" </br>}
+Response:</br>Status 200: The updated product.</br>Status 404: Product not found.</br>Status 500: Error message.
 
-DELETE /api/product/:id
-Description: Delete a product by its ID.
-Parameters: id (string, required).
-Response:
-Status 200: Success message.
-Status 404: Product not found.
-Status 500: Error message.
+DELETE /api/product/:id</br>Description: Delete a product by its ID.</br>Parameters: id (string, required).</br>Response:</br>Status 200: Success message.</br>Status 404: Product not found.</br>Status 500: Error message.
 
-Access the API:
-The API will run at http://localhost:3000.
+Access the API:</br>The API will run at http://localhost:3000.
 
-Data Model
-The structure of a product depends on the schema in the productModel.js file. An example of a product object:
+Data Model</br>The structure of a product depends on the schema in the productModel.js file. An example of a product object:
 
-json
-Copy code
-{
-  "_id": "unique-id",
-  "name": "Product Name",
-  "price": 100.00,
-  "description": "Product description",
-  "category": "Category name",
-  "stock": 50
+{</br>"_id": "unique-id",</br>"name": "Product Name",</br>"price": 100.00,</br>"description": "Product description",</br>"category": "Category name",</br>"stock": 50
 }
 Notes
-Ensure your MongoDB database is properly connected.
-Update productModel.js to reflect your product schema.
-Use a tool like Postman to test the API endpoints.
+Ensure your MongoDB database is properly connected.</br>Update productModel.js to reflect your product schema.</br>Use a tool like Postman to test the API endpoints.
